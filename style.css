@@ -5,7 +5,7 @@
     list-style: none;
     font-size: 16px;
     font-weight: 400;
-    font-family: Arial, sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 main {
@@ -19,40 +19,43 @@ section {
     width: 450px; 
     color: white;
     margin-top: 75px;
-    padding: 35px;
+    /* padding: 35px; */
 
     box-shadow: -20px -20px 1px 1px rgb(185, 185, 185); /* offset-x | offset-y | blur-radius | spread-radius | color */
 }
 
-header {
-    padding: 20px;
+header {    
+    padding: 50px 50px 15px 50px; 
 }
 
 header h1 {
-    font-size: 40px;
-    letter-spacing: 4px;
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-weight: 700;
 }
-
 
 header p {
     font-size: 20px;
     border-bottom: solid 1px white;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .form {
-    padding: 20px;
+    padding: 20px 55px;
+    display: flex;
     text-align: center;
-
+    justify-content: space-between;
+    align-items: center;
 }
 
 .form input[type=text] {
-    width: 70%;
+    width: 270px;
     height: 22.5px;
     color: rgb(80, 79, 79);
     padding: 15px 10px;
 
     border: black solid 1px;
+    outline: none; /*Borda preta*/
 }
 
 
@@ -61,12 +64,12 @@ header p {
     text-transform: uppercase;
 
     width: 65px;
-    padding: 7.7px;
+    padding: 7px;
     
-    background-color: #2585DA;
+    background-color: transparent;
     color: white;
     border: 1px solid white;
-
+    cursor: pointer;
 }
 
 .form input[type=submit]:hover {
@@ -76,7 +79,7 @@ header p {
 }
 
 .list {
-
+    
 }
 
 .list ul {
@@ -84,8 +87,14 @@ header p {
 }
 
 .list ul li {
-    padding: 20px 20px;
-    text-align: center;
+    justify-content: space-between;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.37);
+    padding: 15px 55px;
+
+    text-align: center; 
+    align-items: center;
+    margin-bottom: 5px;
 }
 
 .list ul li h2 {
@@ -103,6 +112,7 @@ header p {
 
 .changeTheme {
     text-align: end;
+    padding: 15px;
 }
 
 .changeTheme label {

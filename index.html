@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,13 +21,13 @@
 
             <header>
                 <h1>Lista de tarefas</h1>
-                <p>Adicione uma tarefa abaixo</p>
+                <p for="addTask">Adicione uma nova tarefa</p>
             </header>
 
             <!-- FORM DO APP -->
 
             <div class="form">
-                <input type="text" placeholder="Adicionar nova tarefa">
+                <input type="text" placeholder="Digite aqui" id="addTask">
                 <input type="submit" value="Criar">
                 <!-- <button type="submit">Criar</button> Método alternativo -->
             </div>
@@ -39,27 +42,27 @@
                         <div>
                             <button>Finish</button>
                             <button>Delete</button>
-                        </div>
-                        <h2>tarefa 02</h2>
-                    
-                        <div>
-                            <button>Finish</button>
-                            <button>Delete</button>
-                        </div>
-                        <h2>tarefa 03</h2>
-                    
-                        <div>
-                            <button>Finish</button>
-                            <button>Delete</button>
-                        </div>
-                        <h2>tarefa 04</h2>
-                    
-                        <div>
-                            <button>Finish</button>
-                            <button>Delete</button>
-                        </div>
-                    
+                        </div>                              
                     </li>
+
+                    <li>
+                        <h2>tarefa 03</h2>
+                        
+                        <div>
+                            <button>Finish</button>
+                            <button>Delete</button>
+                        </div>                              
+                    </li>
+
+                    <li>
+                        <h2>tarefa 02</h2>
+                        
+                        <div>
+                            <button>Finish</button>
+                            <button>Delete</button>
+                        </div>                              
+                    </li>
+
                 </ul>
             </div>
 
@@ -67,7 +70,7 @@
 
             <div class="changeTheme">
                 <label for="inputModoNoturno">Modo noturno</label>
-                <input type="checkbox" id="inputModoNoturno"></label> <!--Linkar o nome com o checkbox-->
+                <input type="checkbox" id="inputModoNoturno"></input> <!--Linkar o nome com o checkbox-->
             </div>
 
         </section>
