@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center; /*Alinha display flex*/
+    
+}
+
+section {
+    background-color: #2585DA;
+    width: 450px; 
+    color: white;
+    margin-top: 75px;
+    padding: 35px;
+
+    box-shadow: -20px -20px 1px 1px rgb(185, 185, 185); /* offset-x | offset-y | blur-radius | spread-radius | color */
+}
+
+header {
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+
+
+header p {
+    font-size: 20px;
+    border-bottom: solid 1px white;
+    letter-spacing: 2px;
+}
+
+.form {
+    padding: 20px;
+    text-align: center;
+
+}
+
+.form input[type=text] {
+    width: 70%;
+    height: 22.5px;
+    color: rgb(80, 79, 79);
+    padding: 15px 10px;
+
+    border: black solid 1px;
+}
+
+
+.form input[type=submit] {
+    font-size: 13px;
+    text-transform: uppercase;
+
+    width: 65px;
+    padding: 7.7px;
+    
+    background-color: #2585DA;
+    color: white;
+    border: 1px solid white;
+
+}
+
+.form input[type=submit]:hover {
+    background-color: white;
+    color: #2585DA;
+    border: 1px solid black;
+}
+
+.list {
+
+}
+
+.list ul {
+
+}
+
+.list ul li {
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.list ul li h2 {
+
+}
+
+.list ul li div {
+
+}
+
+
+.list ul li div button {
+
+}
+
+.changeTheme {
+    text-align: end;
+}
+
+.changeTheme label {
+
+}
+
+.changeTheme input[type=checkbox]{
+    
+}
