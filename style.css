@@ -115,8 +115,6 @@ header p {
     height: auto;
     align-items: center;
     justify-items: end;
-    margin: 1px;
-
 }
 
 .finTask, .remTask {
