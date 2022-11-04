@@ -88,7 +88,6 @@ header p {
 
 .list ul li {
     justify-content: space-between;
-    align-items: center;
     display: flex;
     background-color: rgba(255, 255, 255, 0.37);
     padding: 15px 55px;
@@ -103,7 +102,8 @@ header p {
 }
 
 .list ul li div {
-
+    display: flex;
+    align-items: center;
 }
 
 
@@ -111,11 +111,17 @@ header p {
     background-color: transparent;
     border: transparent;
     cursor: pointer;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-items: end;
+    margin: 1px;
+
 }
 
-.remTask {
-   width: 23px;
-   height: 23px;
+.remTask, .addTask {
+    width: 33px;
+    height: 25px;
 }
 
 .changeTheme {
@@ -147,7 +153,7 @@ background: radial-gradient( circle at var(--position) 50%, #2585DA 15%, var(--b
 width: 3em;
 height: 1.5em;
 border-radius: 1.5em;
-border:1px solid #086cc4;
+border: 2px solid #086cc4;
 margin: 0 15px;
 
 }
@@ -158,10 +164,11 @@ margin: 0 15px;
 --position: 80%;
 --color: #000;
 background: radial-gradient( circle at var(--position) 50%, white 15%, var(--border) 16%, var(--color) 19%);
-border:1px solid #fff;
+border: 2px solid #fff;
 
 }
 
 .checkbox:disabled{
 opacity: .4;
+
 }
