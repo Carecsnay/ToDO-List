@@ -113,9 +113,17 @@ header p {
     cursor: pointer;
 }
 
+.remTask {
+   width: 23px;
+   height: 23px;
+}
+
 .changeTheme {
-    text-align: end;
     padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    
 }
 
 .changeTheme label {
@@ -124,4 +132,36 @@ header p {
 
 .changeTheme input[type=checkbox]{
     
+}
+
+.checkbox {
+-webkit-appearance: none;
+-moz-appearance: none;
+--position: 20%;
+--color: #fff;
+--border: #2585DA;
+
+appearance: none;
+background: radial-gradient( circle at var(--position) 50%, #2585DA 15%, var(--border) 16%, var(--color) 19%);
+
+width: 3em;
+height: 1.5em;
+border-radius: 1.5em;
+border:1px solid #086cc4;
+margin: 0 15px;
+
+}
+
+.checkbox:checked {
+--border: black;
+
+--position: 80%;
+--color: #000;
+background: radial-gradient( circle at var(--position) 50%, white 15%, var(--border) 16%, var(--color) 19%);
+border:1px solid #fff;
+
+}
+
+.checkbox:disabled{
+opacity: .4;
 }
