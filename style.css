@@ -119,7 +119,7 @@ header p {
 
 }
 
-.remTask, .addTask {
+.finTask, .remTask {
     width: 33px;
     height: 25px;
 }
