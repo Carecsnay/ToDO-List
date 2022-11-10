@@ -3,8 +3,8 @@
 const list = document.querySelector('ul');
 const fieldEnterNewTask = document.querySelector('#task');
 const buttonAddNewTask = document.querySelector('.form input[type=submit]');
-const buttonRemovesTask = document.querySelector('.remTask');
-const buttonFinishTask = document.querySelector('.finTask');
+const buttonRemovesTask = document.querySelectorAll('.remTask');
+const buttonFinishTask = document.querySelectorAll('.finTask');
 const changeTheme = document.querySelector('.checkbox');
 
 // Testando os elementos selecionados
@@ -80,7 +80,7 @@ function addNewTask() {
     const newTaskStructure = `
         <h2>${typedContent}</h2>
         <div>
-            <button>
+            <button id="finTask">
                 <img class="finTask" src="./assets/square.svg" alt="Icone de concluir Tarefa">
             </button>
             <button>
@@ -97,15 +97,23 @@ function addNewTask() {
 
     // Joga a estrutura interpretada dentro do LI
     list.appendChild(taskToBeCreated);
+
+    // Adicionando rastro em cada tarefa criada
+    const footprint = document.querySelectorAll('#finTask ~ button');
+    console.log(footprint)
+
 }
 
 // function finishTask() {
 
 // }
 
-// function removeTask() {
+function removeTask(event) {
+    const buttonSelected = event.currentTarget;
+    const taskSelected = buttonSelected.closet('');
 
-// }
+    taskSelected.remove();
+}
 
 // function changeTheme() {
 
