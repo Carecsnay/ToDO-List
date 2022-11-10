@@ -78,14 +78,6 @@ header p {
     border: 1px solid black;
 }
 
-.list {
-    
-}
-
-.list ul {
-
-}
-
 .list ul li {
     justify-content: space-between;
     display: flex;
@@ -95,10 +87,6 @@ header p {
     text-align: center; 
     align-items: center;
     margin-bottom: 5px;
-}
-
-.list ul li h2 {
-
 }
 
 .list ul li div {
@@ -127,14 +115,6 @@ header p {
     display: flex;
     align-items: center;
     justify-content: end;
-    
-}
-
-.changeTheme label {
-
-}
-
-.changeTheme input[type=checkbox]{
     
 }
 
