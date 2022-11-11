@@ -79,11 +79,11 @@ function addNewTask() {
     const newTaskStructure = `
         <h2>${typedContent}</h2>
         <div>
-            <button id="finTask">
-                <img class="finTask" src="./assets/square.svg" alt="Icone de concluir Tarefa">
+            <button id="finTaskButton">
+                <img class="finTaskButton" src="./assets/square.svg" alt="Icone de concluir Tarefa">
             </button>
-            <button id=remTask>
-                <img class="remTask" src="./assets/trash.svg" alt="Icone de remoção de Tarefa">
+            <button id=remTaskButton>
+                <img class="remTaskButton" src="./assets/trash.svg" alt="Icone de remoção de Tarefa">
             </button>
         </div>                              
     `;
@@ -98,24 +98,40 @@ function addNewTask() {
     list.appendChild(taskToBeCreated);
 
     // Adicionando rastro em cada tarefa criada, no caso selecionando os botões para definir as funções excluir e finalizar
-    const footPrintRemTask = document.querySelectorAll('#remTask');
-    // const footPrintFinTask = document.querySelectorAll('#finTask');
+    const footPrintRemTask = document.querySelectorAll('#remTaskButton');
+    const footPrintFinTask = document.querySelectorAll('#finTaskButton');
 
-    addEventHandler(footPrintRemTask);
-    // addEventHandler(footPrintFinTask);
+    addEventHandlerRemTask(footPrintRemTask);
+    addEventHandlerFinTask(footPrintFinTask);
 
 }
 
-// function finishTask() {
-
-// }
-
-function addEventHandler(remBottonsList) {
+function addEventHandlerFinTask(remBottonsList) {
     // Loop percorrendo todos os botões de excluir
     for (let i = 0; i < remBottonsList.length; i++){
-        const buttonRemove = remBottonsList[i];
+        const buttonFinishTask = remBottonsList[i];
 
-        buttonRemove.addEventListener('click', removeTask)
+        buttonFinishTask.addEventListener('click', finishTask)
+    }
+}
+
+function finishTask() {
+    // Pegar evento clicado
+    const buttonSelected = event.currentTarget;
+    
+    // Retorna o ancestral
+    const taskSelected = buttonSelected.closest('li');
+
+    // Adiciona a classe que faz o efeito da tarefa concluida
+    taskSelected.classList.toggle('finTask');
+}
+
+function addEventHandlerRemTask(remBottonsList) {
+    // Loop percorrendo todos os botões de excluir
+    for (let i = 0; i < remBottonsList.length; i++){
+        const buttonRemoveTask = remBottonsList[i];
+
+        buttonRemoveTask.addEventListener('click', removeTask)
     }
 }
 
@@ -123,9 +139,10 @@ function removeTask(event) {
     // Pegar evento clicado
     const buttonSelected = event.currentTarget;
 
-    // Apaga a tarefa (LI) a partir do botão selecionado
+    // Retorna o ancestral
     const taskSelected = buttonSelected.closest('li');
 
+    // Apaga a tarefa (LI) a partir do botão selecionado
     taskSelected.remove();
 }
 

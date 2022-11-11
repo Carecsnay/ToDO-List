@@ -89,6 +89,13 @@ header p {
     margin-bottom: 5px;
 }
 
+/* Quando o LI receber a classe finTask o H2 vai receber essas propriedades */
+.list ul li.finTask h2 {
+    text-decoration: line-through;
+    font-style: italic;
+    opacity: 0.6;
+}
+
 .list ul li div {
     display: flex;
     align-items: center;
@@ -105,7 +112,9 @@ header p {
     justify-items: end;
 }
 
-.finTask, .remTask {
+
+
+.finTaskButton, .remTaskButton {
     width: 33px;
     height: 25px;
 }
