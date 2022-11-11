@@ -3,8 +3,7 @@
 const list = document.querySelector('ul');
 const fieldEnterNewTask = document.querySelector('#task');
 const buttonAddNewTask = document.querySelector('.form input[type=submit]');
-const buttonRemovesTask = document.querySelectorAll('.remTask');
-const buttonFinishTask = document.querySelectorAll('.finTask');
+
 const changeTheme = document.querySelector('.checkbox');
 
 // Testando os elementos selecionados
@@ -83,7 +82,7 @@ function addNewTask() {
             <button id="finTask">
                 <img class="finTask" src="./assets/square.svg" alt="Icone de concluir Tarefa">
             </button>
-            <button>
+            <button id=remTask>
                 <img class="remTask" src="./assets/trash.svg" alt="Icone de remoção de Tarefa">
             </button>
         </div>                              
@@ -98,9 +97,12 @@ function addNewTask() {
     // Joga a estrutura interpretada dentro do LI
     list.appendChild(taskToBeCreated);
 
-    // Adicionando rastro em cada tarefa criada
-    const footprint = document.querySelectorAll('#finTask ~ button');
-    console.log(footprint)
+    // Adicionando rastro em cada tarefa criada, no caso selecionando os botões para definir as funções excluir e finalizar
+    const footPrintRemTask = document.querySelectorAll('#remTask');
+    // const footPrintFinTask = document.querySelectorAll('#finTask');
+
+    addEventHandler(footPrintRemTask);
+    // addEventHandler(footPrintFinTask);
 
 }
 
@@ -108,9 +110,21 @@ function addNewTask() {
 
 // }
 
+function addEventHandler(remBottonsList) {
+    // Loop percorrendo todos os botões de excluir
+    for (let i = 0; i < remBottonsList.length; i++){
+        const buttonRemove = remBottonsList[i];
+
+        buttonRemove.addEventListener('click', removeTask)
+    }
+}
+
 function removeTask(event) {
+    // Pegar evento clicado
     const buttonSelected = event.currentTarget;
-    const taskSelected = buttonSelected.closet('');
+
+    // Apaga a tarefa (LI) a partir do botão selecionado
+    const taskSelected = buttonSelected.closest('li');
 
     taskSelected.remove();
 }
