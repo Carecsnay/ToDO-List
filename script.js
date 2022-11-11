@@ -124,6 +124,8 @@ function finishTask() {
 
     // Adiciona a classe que faz o efeito da tarefa concluida
     taskSelected.classList.toggle('finTask');
+
+    
 }
 
 function addEventHandlerRemTask(remBottonsList) {

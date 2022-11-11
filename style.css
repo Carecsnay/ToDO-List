@@ -95,6 +95,14 @@ header p {
     font-style: italic;
     opacity: 0.6;
 }
+/* Quando o LI receber a classe finTask o botão de finalizar tarefa vai receber essas propriedades */
+
+.list ul li.finTask .finTaskButton {
+    background-image: url(./assets/check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
 
 .list ul li div {
     display: flex;
