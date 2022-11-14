@@ -40,7 +40,7 @@ body.darkMode .form{
 
 body.darkMode .form input[type=text]{
     /* background-color: transparent; */
-    color: #fff;
+    color: #000;
     border: #d0d0d0 1px solid;
 }
 
