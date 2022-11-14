@@ -4,8 +4,6 @@ const list = document.querySelector('ul');
 const fieldEnterNewTask = document.querySelector('#task');
 const buttonAddNewTask = document.querySelector('.form input[type=submit]');
 
-const changeTheme = document.querySelector('.checkbox');
-
 // Testando os elementos selecionados
 
 // fieldEnterNewTask.addEventListener('click', teste);
@@ -148,6 +146,13 @@ function removeTask(event) {
     taskSelected.remove();
 }
 
-// function changeTheme() {
+// Modo Noturno
 
-// }
+
+function changeTheme() {
+    const body = document.querySelector('body');
+    const main = document.querySelector('main');
+
+    body.classList.toggle('darkMode');
+
+}
