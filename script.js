@@ -74,7 +74,8 @@ function addNewTask() {
 
 
     // 2º método para replicar a estrutura linha 79 até 
-    const newTaskStructure = `
+    if (typedContent != '') {
+        const newTaskStructure = `
         <h2>${typedContent}</h2>
         <div>
             <button id="finTaskButton">
@@ -102,6 +103,8 @@ function addNewTask() {
     addEventHandlerRemTask(footPrintRemTask);
     addEventHandlerFinTask(footPrintFinTask);
 
+    fieldEnterNewTask.value = '';
+    }
 }
 
 function addEventHandlerFinTask(remButtonsList) {
