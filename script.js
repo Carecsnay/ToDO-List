@@ -30,10 +30,10 @@ function addNewTask() {
     //     <h2>Tarefa 02</h2>
     //     <div>
     //         <button>
-    //             <img class="finTask" src="./assets/square.svg" alt="Icone de concluir Tarefa">
+    //             <img class="finTask" src="./assets/square.svg" alt="Ícone de concluir Tarefa">
     //         </button>
     //         <button>
-    //             <img class="remTask" src="./assets/trash.svg" alt="Icone de remoção de Tarefa">
+    //             <img class="remTask" src="./assets/trash.svg" alt="Ícone de remoção de Tarefa">
     //         </button>
     //     </div>                              
     // </li>
@@ -55,12 +55,12 @@ function addNewTask() {
 
     // // Adicionando imagem e classe de concluir tarefa
     // img.src = './assets/square.svg';
-    // img.alt = 'Icone de concluir Tarefa';
+    // img.alt = 'Ícone de concluir Tarefa';
     // img.classList.add('finTask');
 
     // // Adicionando imagem e classe de excluir tarefa
     // img2.src = './assets/trash.svg';
-    // img2.alt = 'Icone de remoção de Tarefa';
+    // img2.alt = 'Ícone de remoção de Tarefa';
     // img2.classList.add('remTask');
 
     // //Inserindo elementos aninhados
@@ -78,19 +78,19 @@ function addNewTask() {
         <h2>${typedContent}</h2>
         <div>
             <button id="finTaskButton">
-                <img class="finTaskButton" src="./assets/square.svg" alt="Icone de concluir Tarefa">
+                <img class="finTaskButton" src="./assets/square.svg" alt="Ícone de concluir Tarefa">
             </button>
             <button id=remTaskButton>
-                <img class="remTaskButton" src="./assets/trash.svg" alt="Icone de remoção de Tarefa">
+                <img class="remTaskButton" src="./assets/trash.svg" alt="Ícone de remoção de Tarefa">
             </button>
         </div>                              
     `;
 
     // Cria o elemento LI
     const taskToBeCreated = document.createElement('li');
-    
+
     // Interpreta a constante "newTaskStructure" como HTML
-    taskToBeCreated.innerHTML = newTaskStructure; 
+    taskToBeCreated.innerHTML = newTaskStructure;
 
     // Joga a estrutura interpretada dentro do LI
     list.appendChild(taskToBeCreated);
@@ -104,10 +104,10 @@ function addNewTask() {
 
 }
 
-function addEventHandlerFinTask(remBottonsList) {
+function addEventHandlerFinTask(remButtonsList) {
     // Loop percorrendo todos os botões de excluir
-    for (let i = 0; i < remBottonsList.length; i++){
-        const buttonFinishTask = remBottonsList[i];
+    for (let i = 0; i < remButtonsList.length; i++) {
+        const buttonFinishTask = remButtonsList[i];
 
         buttonFinishTask.addEventListener('click', finishTask)
     }
@@ -116,20 +116,20 @@ function addEventHandlerFinTask(remBottonsList) {
 function finishTask() {
     // Pegar evento clicado
     const buttonSelected = event.currentTarget;
-    
+
     // Retorna o ancestral
     const taskSelected = buttonSelected.closest('li');
 
-    // Adiciona a classe que faz o efeito da tarefa concluida
+    // Adiciona a classe que faz o efeito da tarefa concluída
     taskSelected.classList.toggle('finTask');
 
-    
+
 }
 
-function addEventHandlerRemTask(remBottonsList) {
+function addEventHandlerRemTask(remButtonsList) {
     // Loop percorrendo todos os botões de excluir
-    for (let i = 0; i < remBottonsList.length; i++){
-        const buttonRemoveTask = remBottonsList[i];
+    for (let i = 0; i < remButtonsList.length; i++) {
+        const buttonRemoveTask = remButtonsList[i];
 
         buttonRemoveTask.addEventListener('click', removeTask)
     }
@@ -151,8 +151,5 @@ function removeTask(event) {
 
 function changeTheme() {
     const body = document.querySelector('body');
-    const main = document.querySelector('main');
-
     body.classList.toggle('darkMode');
-
 }
