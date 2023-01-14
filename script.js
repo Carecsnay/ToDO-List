@@ -55,9 +55,9 @@ function retrieveList () {
 
 retrieveList();
 
-function addEventHandlerFinTask(remButtonsList) {
-    for (let i = 0; i < remButtonsList.length; i++) {
-        const buttonFinishTask = remButtonsList[i];
+function addEventHandlerFinTask(finButtonsList) {
+    for (let i = 0; i < finButtonsList.length; i++) {
+        const buttonFinishTask = finButtonsList[i];
 
         buttonFinishTask.addEventListener('click', finishTask)
     }
