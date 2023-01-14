@@ -205,7 +205,7 @@ body.darkMode section {
     color: white;
     margin-top: 75px;
     border: 4px solid black;
-    box-shadow: -20px -20px 1px 1px rgb(86, 86, 86); /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: -20px -20px 1px 1px rgba(255, 255, 255, 0.54); /* offset-x | offset-y | blur-radius | spread-radius | color */
 }
 
 body.darkMode header{
