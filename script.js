@@ -156,3 +156,10 @@ function changeTheme() {
     const body = document.querySelector('body');
     body.classList.toggle('darkMode');
 }
+
+// Adicionando tarefas pressionando Enter
+
+const typedContentListener = document.querySelector('#task');
+typedContentListener.addEventListener('keypress', (event) => {
+    if (event.code === "Enter") addNewTask();
+});
