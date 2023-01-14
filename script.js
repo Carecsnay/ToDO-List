@@ -63,7 +63,7 @@ function addEventHandlerFinTask(finButtonsList) {
     }
 }
 
-function finishTask() {
+function finishTask(event) {
     const buttonSelected = event.currentTarget;
 
     const taskSelected = buttonSelected.closest('li');
