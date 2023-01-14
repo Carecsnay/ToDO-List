@@ -88,11 +88,13 @@ function removeTask(event) {
     taskSelected.remove();
 }
 
+const buttonDarkMode = document.querySelector('.checkbox')
+buttonDarkMode.addEventListener('click', changeTheme);
+
 function changeTheme() {
     const body = document.querySelector('body');
     body.classList.toggle('darkMode');
 }
-
  
 fieldEnterNewTask.addEventListener('keypress' ,addNewTaskWithKeyboard)
 
