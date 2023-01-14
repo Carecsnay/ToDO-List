@@ -12,9 +12,10 @@ function addNewTask() {
     if (typedContent != '') {
         tasks.push(typedContent);
         localStorage.setItem('tasks', JSON.stringify(tasks));
-
+              
         const newTaskStructure = `
-        <h2>${typedContent}</h2>
+
+        <h2>${retrieveList()}</h2>
         <div>
             <button id="finTaskButton">
                 <img class="finTaskButton" src="./assets/square.svg" alt="Ícone de concluir Tarefa">
@@ -38,8 +39,21 @@ function addNewTask() {
     addEventHandlerFinTask(footPrintFinTask);
 
     fieldEnterNewTask.value = '';
+        
     }
 }
+
+function retrieveList () {
+    const storedList = localStorage.getItem('tasks');
+    if (storedList) {
+        return JSON.parse(storedList);
+    }
+    else {
+        return [];
+    }
+}
+
+retrieveList();
 
 function addEventHandlerFinTask(remButtonsList) {
     for (let i = 0; i < remButtonsList.length; i++) {
@@ -79,7 +93,12 @@ function changeTheme() {
     body.classList.toggle('darkMode');
 }
 
-const typedContentListener = document.querySelector('#task');
-typedContentListener.addEventListener('keypress', (event) => {
-    if (event.code === "Enter") addNewTask();
-});
+ 
+fieldEnterNewTask.addEventListener('keypress' ,addNewTaskWithKeyboard)
+
+function addNewTaskWithKeyboard () {
+    const typedContentListener = document.querySelector('#task');
+    typedContentListener.addEventListener('keypress', (event) => {
+        if (event.code === "Enter") addNewTask();
+    });
+}
